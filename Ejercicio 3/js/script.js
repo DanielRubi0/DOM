@@ -1,51 +1,101 @@
-var $stars;
+let star_one = document.getElementById("star_1");
+let star_two = document.getElementById("star_2");
+let star_three = document.getElementById("star_3");
+let star_four = document.getElementById("star_4");
+let star_five = document.getElementById("star_5");
 
-jQuery(document).ready(function ($) {
-    // Custom whitelist to allow for using HTML tags in popover content
-    var myDefaultWhiteList = $.fn.tooltip.Constructor.Default.whiteList;
-    myDefaultWhiteList.textarea = [];
-    myDefaultWhiteList.button = [];
+//on mouse over event
 
-    $stars = $(".rate-popover");
+star_one.onmouseover = () => {
+    star_one.style.color = "gold";
+};
 
-    $stars.on("mouseover", function () {
-        var index = $(this).attr("data-index");
-        markStarsAsActive(index);
-    });
+star_two.onmouseover = () => {
+    star_one.style.color = "gold";
+    star_two.style.color = "gold";
+};
 
-    function markStarsAsActive(index) {
-        unmarkActive();
-        for (var i = 0; i <= index; i++) {
-            $($stars.get(i)).addClass("amber-text");
-        }
-    }
+star_three.onmouseover = () => {
+    star_one.style.color = "gold";
+    star_two.style.color = "gold";
+    star_three.style.color = "gold";
+};
 
-    function unmarkActive() {
-        $stars.removeClass("amber-text");
-    }
+star_four.onmouseover = () => {
+    star_one.style.color = "gold";
+    star_two.style.color = "gold";
+    star_three.style.color = "gold";
+    star_four.style.color = "gold";
+};
 
-    $stars.on("click", function () {
-        $stars.popover("hide");
-    });
+star_five.onmouseover = () => {
+    star_one.style.color = "gold";
+    star_two.style.color = "gold";
+    star_three.style.color = "gold";
+    star_four.style.color = "gold";
+    star_five.style.color = "gold";
+};
 
-    // Submit, you can add some extra custom code here
-    // ex. to send the information to the server
-    $("#rateMe").on("click", "#voteSubmitButton", function () {
-        $stars.popover("hide");
-    });
+//on mouse out event
 
-    // Cancel, just close the popover
-    $("#rateMe").on("click", "#closePopoverButton", function () {
-        $stars.popover("hide");
-    });
-});
+star_one.onmouseoout = () => {
+    star_one.style.color = "black";
+};
 
-$(function () {
-    $(".rate-popover").popover({
-        // Append popover to #rateMe to allow handling form inside the popover
-        container: "#rateMe",
-        // Custom content for popover
-        content: `<div class="my-0 py-0"> <textarea type="text" style="font-size: 0.78rem" class="md-textarea form-control py-0" placeholder="Write us what can we improve" rows="3"></textarea> <button id="voteSubmitButton" type="submit" class="btn btn-sm btn-primary">Submit!</button> <button id="closePopoverButton" class="btn btn-flat btn-sm">Close</button>  </div>`,
-    });
-    $(".rate-popover").tooltip();
-});
+star_two.onmouseout = () => {
+    star_one.style.color = "black";
+    star_two.style.color = "black";
+};
+
+star_three.onmouseout = () => {
+    star_one.style.color = "black";
+    star_two.style.color = "black";
+    star_three.style.color = "black";
+};
+
+star_four.onmouseout = () => {
+    star_one.style.color = "black";
+    star_two.style.color = "black";
+    star_three.style.color = "black";
+    star_four.style.color = "black";
+};
+
+star_five.onmouseout = () => {
+    star_one.style.color = "black";
+    star_two.style.color = "black";
+    star_three.style.color = "black";
+    star_four.style.color = "black";
+    star_five.style.color = "black";
+};
+
+//on click
+
+star_one.onclick = () => {
+    star_one.style.color = "gold";
+};
+
+star_two.onclick = () => {
+    star_one.style.color = "gold";
+    star_two.style.color = "gold";
+};
+
+star_three.onclick = () => {
+    star_one.style.color = "gold";
+    star_two.style.color = "gold";
+    star_three.style.color = "gold";
+};
+
+star_four.onclick = () => {
+    star_one.style.color = "gold";
+    star_two.style.color = "gold";
+    star_three.style.color = "gold";
+    star_four.style.color = "gold";
+};
+
+star_five.onclick = () => {
+    star_one.style.color = "gold";
+    star_two.style.color = "gold";
+    star_three.style.color = "gold";
+    star_four.style.color = "gold";
+    star_five.style.color = "gold";
+};
